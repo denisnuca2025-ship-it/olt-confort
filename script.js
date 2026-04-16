@@ -33,6 +33,9 @@ if (navToggle && primaryNav && navBackdrop) {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
+      if (document.body.classList.contains("product-modal-open")) {
+        return;
+      }
       closeNav();
     }
   });
